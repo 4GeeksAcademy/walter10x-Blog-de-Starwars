@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
+export const Nave= props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
-	console.log(useParams())
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+			<h1 className="display-4">THIS NAVE: {params.nave_id}</h1>
 
 			<hr className="my-4" />
 
@@ -22,6 +21,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+Nave.propTypes = {
 	match: PropTypes.object
 };

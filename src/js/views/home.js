@@ -9,25 +9,16 @@ export const Home = () =>{
 	const { store, actions } = useContext(Context);
 
 
-	useEffect(()=> {
-        console.log('se cargo el homeroo')
-		fetch('https://www.swapi.tech/api/starships')
-		.then( (response)=> response.json())
-		.then( (data)=> setStarships(data.results))
-      }, [])
-      
-
 	
+	console.log(store.naves)
 	return(
 	(
 	<div className="text-center mt-5">
 		<h1>Home!</h1>
-		<h1>Naves Desde la API</h1>
-			
 
-
-{starships.map( (item)=> <Nave key={item.uid} title = {item.name}/>)}
-
+     <h1>naves desde FLUX</h1>
+     {store.naves.map( (item, index)=> <Nave key={`${item.uid}-${index}`} title={item.name} />)}
+	 
 
 
 	</div>

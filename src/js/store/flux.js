@@ -9,6 +9,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					title: "SECOND",
+					name: "white",
+					initial: "white"
+				}
+			],
+			naves: [
+				{
+					uid: "FIRST",
+					name: "white",
+					initial: "white"
+				},
+				{
+					title: "SECOND",
 					background: "white",
 					initial: "white"
 				}
@@ -20,6 +32,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
+
+				console.log('se cargo desde flux')
+				fetch('https://www.swapi.tech/api/starships')
+		        .then( (response)=> response.json())
+		        .then( (data)=> setStore({naves:data.results}))
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/

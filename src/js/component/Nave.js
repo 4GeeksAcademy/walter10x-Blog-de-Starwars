@@ -13,7 +13,10 @@ export const Nave = (props) => {
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>
           <p className="card-text">Nave Informacion</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+          
+          <Link className="btn btn-primary" to={"/nave/1"}>
+								<span>ver nave </span>
+							</Link>
         </div>
       </div>
       
