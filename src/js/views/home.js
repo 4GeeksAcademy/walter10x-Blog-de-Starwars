@@ -5,21 +5,23 @@ import { Nave } from "../component/Nave";
 import { Context } from "../store/appContext";
 
 export const Home = () =>{
-    const [starships, setStarships] = useState  ([]);
-	const { store, actions } = useContext(Context);
+       const [starship,setStarship] = useState ({})
+	   const { store, actions } = useContext(Context);
 
-
+	  
 	
-	console.log(store.naves)
 	return(
 	(
 	<div className="text-center mt-5">
 		<h1>Home!</h1>
 
-     <h1>naves desde FLUX</h1>
-     {store.naves.map( (item, index)=> <Nave key={`${item.uid}-${index}`} title={item.name} />)}
-	 
 
+	 <h1>naves desde flux</h1>
+
+	 {store.naves.map((item) => (<Nave key={item.uid} title={item.name} />))}
+
+
+ 	
 
 	</div>
 	)
