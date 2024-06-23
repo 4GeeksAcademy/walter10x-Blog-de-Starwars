@@ -18,7 +18,7 @@ export const Home = () =>{
 
 	 <h1>naves desde flux</h1>
 
-	 {store.naves.map((item) => (<Nave key={item.uid} title={item.name} />))}
+	 {store.naves.map((item) => (<Nave key={item.uid} uid={item.uid} title={item.name} />))}
 
 
  	

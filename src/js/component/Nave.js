@@ -12,9 +12,9 @@ export const Nave = (props) => {
         <img src={rigoImage} className="card-img-top" alt="..."/>
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>
-          <p className="card-text">Nave Informacion</p>
+          <p className="card-text">{props.uid}</p>
           
-          <Link className="btn btn-primary" to={"/nave/1"}>
+          <Link className="btn btn-primary" to={"/nave/" + props.uid}>
 								<span>ver nave </span>
 							</Link>
         </div>
