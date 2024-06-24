@@ -33,9 +33,18 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
             loadSomeData: () => {
                 console.log('se cargo desde flux');
-                fetch('https://www.swapi.tech/api/starships')
-                    .then((response) => response.json())
+                fetch('https://swapi.dev/api/starships')
+                    .then( (response) => response.json())
                     .then((data) => setStore({ naves: data.results }));
+                    
+                    /* .then((data)=> data.results.map(item=>{
+                        const urlSplitted = item.url.split('/');
+                        return {
+                            uid: urlSplitted[urlSplitted.lenght - 2],
+                            ...item
+                        }
+                    })) */
+                    
             },
             changeColor: (index, color) => {
                 //get the store
