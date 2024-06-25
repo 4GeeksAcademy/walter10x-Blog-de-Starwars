@@ -1,3 +1,5 @@
+import { Nave } from "../component/Nave";
+
 const getState = ({ getStore, getActions, setStore }) => {
     return {
         store: {
@@ -24,27 +26,46 @@ const getState = ({ getStore, getActions, setStore }) => {
                     name: "white",
                     initial: "white"
                 }
-            ]
+            ],
+            message:'inicial desde flux',
+            favorite:[],
         },
         actions: {
             // Use getActions to call a function within a fuction
             exampleFunction: () => {
                 getActions().changeColor(0, "green");
             },
+
+             changeMessage : (title) => {
+                console.log('cambio des la action de fliux la funcion llamada ' + title)
+                setStore({
+                     message: title });
+
+                     const store = getStore();
+
+                      if (store.favorite.includes(title)){
+                        console.log('se encuentra ya  elegido')
+                        setStore({
+                            favorite: store.favorite.filter((nave)=> nave != title) 
+                        });
+                      }else{
+                          setStore({
+                             favorite: [...store.favorite, title] 
+                         });
+                        console.log('puedes agregar')
+                      }
+
+            },
+        
+
+             
+
             loadSomeData: () => {
                 console.log('se cargo desde flux');
                 fetch('https://swapi.dev/api/starships')
                     .then( (response) => response.json())
                     .then((data) => setStore({ naves: data.results }));
-                    
-                    /* .then((data)=> data.results.map(item=>{
-                        const urlSplitted = item.url.split('/');
-                        return {
-                            uid: urlSplitted[urlSplitted.lenght - 2],
-                            ...item
-                        }
-                    })) */
-                    
+                      
             },
             changeColor: (index, color) => {
                 //get the store
@@ -58,17 +79,11 @@ const getState = ({ getStore, getActions, setStore }) => {
                 });
 
                 //reset the global store
-                setStore({ demo: demo });
-            },
-           /*  fetchStarshipDetails: (naveId) => {
-                fetch(`https://www.swapi.tech/api/starships/9`)
-                    .then((response) => response.json())
-                    .then((data) => {
-                        const starshipDetails = data.result.properties;
-                        setStarship(starshipDetails);
-                    })
-                    .catch((error) => console.error('Error fetching starship details:', error));
-            } */
+                setStore({ 
+                    demo: demo 
+                });
+            }
+
         }
     };
 };

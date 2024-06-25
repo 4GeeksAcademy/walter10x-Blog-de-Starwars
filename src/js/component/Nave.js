@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import rigoImage from "../../img/rigo-baby.jpg";
-
+import { Context } from "../store/appContext";
 export const Nave = (props) => {
+
+  const {actions,store} = useContext(Context)
     
  
     
@@ -17,6 +19,7 @@ export const Nave = (props) => {
           <Link className="btn btn-primary" to={"/nave/" + props.uid}>
 								<span>ver nave </span>
 							</Link>
+              <button onClick=  {()=>console.log(actions.changeMessage(props.title))} className="btn btn-primary"> Cambiar mensaje</button>
         </div>
       </div>
       
