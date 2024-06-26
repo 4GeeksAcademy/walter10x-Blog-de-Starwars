@@ -47,7 +47,7 @@ export const Nave = (props) => {
 
     <div h1className="card" style={{ width: "300px", height: "600px" }}>
       
-      <div className="card-img-top" style={{ height: "400px", overflow: "hidden" }}>
+      <div className="card-img-top " style={{ height: "400px", overflow: "hidden" }}>
         <img
           src={imageUrl}
           alt={props.title}
@@ -66,8 +66,8 @@ export const Nave = (props) => {
         <h5 className="card-title">{props.title}</h5>
         <p className="card-text">{props.model}</p>
         
-        <Link className="btn btn-primaryx" to={"/nave/" + props.uid}>
-          <span>Ver nave</span>
+        <Link className="btn btn-primaryx btn-hover" to={"/nave/" + props.uid}>
+          <span>Learn More!</span>
         </Link>
         
         {/* Botón de favorito */}

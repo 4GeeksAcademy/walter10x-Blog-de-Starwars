@@ -29,7 +29,7 @@
   }
 
   .btn-primaryx{
-    color: #fff;
+    color: #dd9d14;
     background-color: #e2bb0e;
     border-color: #0d6efd;
     margin-left: -150px;
@@ -41,4 +41,26 @@
     box-sizing: border-box;
     color: cornflowerblue;
 }
+
+.card-img-top{
+  border-radius: 60px;
+}
+
+.img-fluid{
+  border-radius: 60px;
+}
   
+.btn-hover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 1px solid transparent; /* Agregar un borde inicialmente transparente */
+  padding: 0.5em 1em;
+  border-radius: 5px; /* Borde redondeado */
+}
+
+/* Estilo hover para el botón */
+.btn-hover:hover {
+  background-color: #575653; /* Color de fondo al hacer hover */
+  transform: scale(1.05); /* Aumenta el tamaño del botón al hacer hover */
+  border-color: #00050a; /* Cambia el color del borde al hacer hover */
+  color: rgb(8, 8, 8);
+}
