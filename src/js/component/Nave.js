@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "../../styles/home.css";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import cr90CorvetteImage from "../../img/cr90-corvette.jpg";
@@ -11,7 +12,6 @@ import xWingImage from "../../img/x-wing.jpg";
 import tieAdvancedImage from "../../img/tie-advanced.jpg";
 import executorImage from "../../img/executor.jpg";
 import rebelTransportImage from "../../img/rebel-transport-new.jpg";
-
 
 const imageMap = {
   "CR90 corvette": cr90CorvetteImage,
@@ -30,8 +30,23 @@ export const Nave = (props) => {
   const { actions, store } = useContext(Context);
   const imageUrl = imageMap[props.title] || "default-image-path.jpg";
 
+  // Determinar si la nave es favorita
+  const isFavorite = store.favorite.includes(props.title);
+
+  const toggleFavorite = () => {
+    if (isFavorite) {
+      actions.removeFavorite(props.title);
+    } else {
+      actions.addFavorite(props.title);
+    }
+  };
+
   return (
-    <div className="card" style={{ width: "300px", height: "600px" }}>
+    
+     
+
+    <div h1className="card" style={{ width: "300px", height: "600px" }}>
+      
       <div className="card-img-top" style={{ height: "400px", overflow: "hidden" }}>
         <img
           src={imageUrl}
@@ -49,17 +64,19 @@ export const Nave = (props) => {
       </div>
       <div className="card-body">
         <h5 className="card-title">{props.title}</h5>
-        {/* <p className="card-text">{props.uid}</p> */}
         <p className="card-text">{props.model}</p>
-        <p className="card-text">{props.manufacter}</p>
-        <Link className="btn btn-primary" to={"/nave/" + props.uid}>
+        
+        <Link className="btn btn-primaryx" to={"/nave/" + props.uid}>
           <span>Ver nave</span>
         </Link>
+        
+        {/* Botón de favorito */}
         <button
-          onClick={() => actions.changeMessage(props.title)}
-          className="btn btn-primary"
+          className="btn favorite-btn"
+          onClick={toggleFavorite}
+          style={{ color: isFavorite ? "red" : "white" }}
         >
-          Cambiar mensaje
+          {isFavorite ? "❤️" : "🤍"}
         </button>
       </div>
     </div>

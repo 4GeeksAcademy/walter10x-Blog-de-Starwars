@@ -1,0 +1,44 @@
+.favorite-btn {
+    border: 2px solid white; /* Borde blanco */
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-left: 200px;
+  }
+  
+  .favorite-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semi-transparente */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .favorite-btn:active {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    background-color: rgba(255, 0, 0, 0.3); /* Fondo rojo oscuro al hacer clic */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+
+  .btn-primaryx{
+    color: #fff;
+    background-color: #e2bb0e;
+    border-color: #0d6efd;
+    margin-left: -150px;
+    margin-bottom: -65px;
+    background-color: rgb(15, 14, 14);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    color: cornflowerblue;
+}
+  

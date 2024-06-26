@@ -14,14 +14,14 @@ export const Footer = () => (
       </p>
       <p>Walter Rivero</p>
       <div className="social-icons">
-        <a href="https://github.com/walterrivero" className="text-light mx-2">
+        <a href="https://github.com/walter10x" className="text-light mx-2">
           <i className="fab fa-github"></i>
         </a>
-        <a href="https://twitter.com/walterrivero" className="text-light mx-2">
+        <a href="https://twitter.com/Walter2023Mr" className="text-light mx-2">
           <i className="fab fa-twitter"></i>
         </a>
         <a
-          href="https://www.linkedin.com/in/walterrivero/"
+          href="https://es.linkedin.com/in/wrivero1403/"
           className="text-light mx-2"
         >
           <i className="fab fa-linkedin"></i>
