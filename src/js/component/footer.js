@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export const Footer = () => (
   <footer
     className="footer bg-dark text-light py-3"
-    style={{ position: "absolute", bottom: 0, width: "100%" }}
+    style={{ position: "absolute", bottom: 0, width: "10%" }}
   >
     <div className="container text-center">
       <p>

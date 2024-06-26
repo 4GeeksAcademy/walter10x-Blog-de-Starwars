@@ -12,6 +12,7 @@ import xWingImage from "../../img/x-wing.jpg";
 import tieAdvancedImage from "../../img/tie-advanced.jpg";
 import executorImage from "../../img/executor.jpg";
 import rebelTransportImage from "../../img/rebel-transport-new.jpg";
+import { Character } from "./character";
 
 const imageMap = {
   "CR90 corvette": cr90CorvetteImage,
@@ -45,7 +46,7 @@ export const Nave = (props) => {
     
      
 
-    <div h1className="card" style={{ width: "300px", height: "600px" }}>
+    <div className="card" style={{ width: "300px", height: "600px", borderRadius:"80px" }}>
       
       <div className="card-img-top " style={{ height: "400px", overflow: "hidden" }}>
         <img

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Nave } from "../component/Nave";
 import { Context } from "../store/appContext";
+import { Character } from "../component/character";
 
 export const Home = () => {
   const [starship, setStarship] = useState({});
@@ -35,6 +36,7 @@ export const Home = () => {
           <p>Cargando naves...</p>
         )}
       </div>
+      <Character />
     </div>
   );
 };
