@@ -50,11 +50,11 @@ export const Nave = (props) => {
   const params = useParams();
 
   useEffect(() => {
-    console.log('El componente se ha montado o actualizado');
+    
     fetch('https://www.swapi.tech/api/starships/' + params.nave_id)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+      
         setStarship({ naves: data.result.properties });
       })
       .catch((error) => console.error('Error fetching starship details:', error));

@@ -22,7 +22,7 @@ const imageMap = {
   "C-3PO": c3poImage,
   "R2-D2": r2d2Image,
   "Owen Lars": owenLarsImage,
-  "Beru Whitesun Lars": beruLarsImage,
+  "Beru Lars": beruLarsImage,
   "R5-D4": r5d4Image,
   "Biggs Darklighter": biggsDarklighterImage,
   "Obi-Wan Kenobi": obiWanKenobiImage,
@@ -55,7 +55,7 @@ export const Character = () => {
 
             return (
               <div className="col" key={index}>
-                <div className="card" style={{ width: "300px", height: "600px", borderRadius: "10px" }}>
+                <div className="card" style={{ width: "300px", height: "600px", borderRadius: "60px" }}>
                   <div className="card-img-top" style={{ height: "400px", overflow: "hidden" }}>
                     <img
                       src={imageUrl}
@@ -75,12 +75,12 @@ export const Character = () => {
                     <h5 className="card-title">{character.name}</h5>
                     <p className="card-text">{character.gender}</p>
                     <p className="card-text">{character.birth_year}</p>
-                    <Link className="btn btn-primary btn-hover" to={"/character/" + character.url.split('/')[5]}>
+                    <Link className="btn btn-primary btn-hover btnlearn" to={"/character/" + character.url.split('/')[5]}>
                       <span>Learn More!</span>
                     </Link>
                     
                     <button
-                      className="btn favorite-btn btn-hover"
+                      className="btn favorite-btn btn-hover btnnew"
                       onClick={toggleFavorite}
                       style={{ color: isFavorite ? "red" : "white" }}
                     >

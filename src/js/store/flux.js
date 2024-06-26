@@ -7,6 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         favorite: [],
         characters: [],
         favoriteCharacter:[],
+        info:[]
       },
       actions: {
         // Carga de datos desde una API externa (ejemplo con Star Wars API)

@@ -73,7 +73,7 @@ export const Nave = (props) => {
         
         {/* Botón de favorito */}
         <button
-          className="btn favorite-btn"
+          className="btn favorite-btn btnstar"
           onClick={toggleFavorite}
           style={{ color: isFavorite ? "red" : "white" }}
         >
