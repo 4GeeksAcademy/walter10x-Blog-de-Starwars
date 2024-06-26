@@ -26,7 +26,6 @@ const imageMap = {
   "R5-D4": r5d4Image,
   "Biggs Darklighter": biggsDarklighterImage,
   "Obi-Wan Kenobi": obiWanKenobiImage,
-  
 };
 
 export const Character = () => {
@@ -54,8 +53,8 @@ export const Character = () => {
             };
 
             return (
-              <div className="col" key={index}>
-                <div className="card" style={{ width: "300px", height: "600px", borderRadius: "60px" }}>
+              <div className="col" key={index} style={{ marginRight: '-20px', marginBottom: '-10px' }}> {/* Ajusta el margen aquí */}
+                <div className="card" style={{ width: "300px", height: "450px", borderRadius: "60px", marginLeft:"10px", marginRight:"28px" }}>
                   <div className="card-img-top" style={{ height: "400px", overflow: "hidden" }}>
                     <img
                       src={imageUrl}

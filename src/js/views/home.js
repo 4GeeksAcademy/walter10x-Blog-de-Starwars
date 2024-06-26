@@ -10,7 +10,7 @@ export const Home = () => {
   return (
     <div className="text-center" style={{ marginTop: "40px" }}>
       <h1 style={{ marginBottom: "20px" }}>Starships</h1>
-      <div className="row flex-row flex-nowrap overflow-auto" style={{ marginLeft: "40px", marginRight:"40px" }}>
+      <div className="row flex-row flex-nowrap overflow-auto" style={{ marginLeft: "2px" }}>
         {store.naves && store.naves.length > 0 ? (
           store.naves.map((item, index) => {
             if (item.url) {

@@ -87,6 +87,7 @@ h1 {
   transition: transform 0.3s ease-in-out;
   margin: 10px;
   
+  
 }
 
 .card:hover {
@@ -110,6 +111,7 @@ h1 {
 
 .card-body {
   text-align: center;
+  
   
 }
 
@@ -153,3 +155,18 @@ h1 {
 .curve{
   border-radius: 60px;
 }
+
+
+.ft{
+  color:#0d6efd
+}
+
+
+.character-container {
+  padding-bottom: 60px; /* Añadir espacio para el footer */
+}
+
+.row.flex-row.flex-nowrap {
+  overflow-x: auto; /* Permitir desplazamiento horizontal */
+}
+
