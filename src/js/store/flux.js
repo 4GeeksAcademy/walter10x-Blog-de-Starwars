@@ -7,7 +7,9 @@ const getState = ({ getStore, getActions, setStore }) => {
         favorite: [],
         characters: [],
         favoriteCharacter:[],
-        info:[]
+        info:[],
+        planets:[],
+        favoritePlanets:[]
       },
       actions: {
         // Carga de datos desde una API externa (ejemplo con Star Wars API)
@@ -58,6 +60,30 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({ favoriteCharacter: store.favoriteCharacter.filter((char) => char !== name) });
           }
         },
+     // Acción para obtener planetas
+     getPlanets: () => {
+      fetch("https://swapi.dev/api/planets")
+        .then((response) => response.json())
+        .then((data) => {
+          setStore({ planets: data.results });
+        })
+        .catch((error) => console.error("Error fetching planets:", error));
+    },
+
+    // Acción para añadir planetas favoritos
+    addFavoritePlanet: (name) => {
+      const store = getStore();
+      if (!store.favoritePlanets.includes(name)) {
+        setStore({ favoritePlanets: [...store.favoritePlanets, name] });
+      }
+    },
+    removeFavoritePlanet: (name) => {
+      const store = getStore();
+      if (store.favoritePlanets.includes(name)) {
+        setStore({ favoritePlanets: store.favoritePlanets.filter((planet) => planet !== name) });
+      }
+    }
+
       },
     };
   };
