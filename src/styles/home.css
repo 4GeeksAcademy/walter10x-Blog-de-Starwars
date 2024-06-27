@@ -1,3 +1,4 @@
+
 .favorite-btn {
     border: 2px solid white; /* Borde blanco */
     background-color: transparent;
@@ -86,7 +87,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   margin: 10px;
-  background-color: #00050a;
+  background-color: rgb(33 37 41)
   
   
 }
